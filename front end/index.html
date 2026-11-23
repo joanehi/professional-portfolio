@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanna Aideloje | Software Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="home">
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger"><span>☰ Menu</span></label>
+            <ul class="nav-list">
+                <li><a href="#home">Homepage</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Joanna_Aideloje_CV.pdf" target="_blank">CV</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul class="nav-list">
+                <li><a href="#home">Homepage</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Joanna_Aideloje_CV.pdf" target="_blank">CV</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-content">
+            <h1>Joanna Aideloje</h1>
+            <p class="subtitle">2nd Year BSc (Hons) Software Engineering Student</p>
+            <p class="bio">Building full-stack web applications, RESTful APIs, and interactive software using Python, JavaScript, Java, SQL, and modern responsive web design.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="Joanna_Aideloje_CV.pdf" target="_blank" class="btn-secondary">Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Projects Section (Dynamically loaded from FastAPI) -->
+        <section id="projects" class="section">
+            <h2>Featured Projects</h2>
+            <div id="project_container" class="project-grid">
+                <p>Loading projects from Python API...</p>
+            </div>
+        </section>
+
+        <!-- Experience & Technical Skills Section -->
+        <section id="experience" class="section">
+            <h2>Education & Technical Skills</h2>
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <h3>BSc (Hons) Software Engineering</h3>
+                    <span class="date">Expected Graduation: June 2028</span>
+                </div>
+                <p class="institution">University of Northampton | Northampton, UK</p>
+                <ul class="exp-list">
+                    <li>Developing full-stack web applications and RESTful APIs using <strong>Python (FastAPI)</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong>.</li>
+                    <li>Engineered modular desktop GUI applications in <strong>Python (Tkinter)</strong> and interactive browser game engines in vanilla <strong>JavaScript</strong>.</li>
+                    <li>Studying object-oriented programming in <strong>Java</strong>, relational database design in <strong>SQL</strong>, and server-side development.</li>
+                    <li>Managing source code, debugging, and deploying repositories using <strong>Git & GitHub</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="skills-box">
+                <h3>Core Tech Stack</h3>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Git & GitHub</span>
+                    <span class="tag">REST APIs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">I am actively seeking Software Engineering internships and summer placement opportunities. Feel free to reach out via email or connect with me on LinkedIn and GitHub.</p>
+            <div class="contact-links">
+                <a href=" mailto:joannaaideloje2020@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://github.com/joanehi" target="_blank" class="contact-btn">GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/joanna-aideloje-5b4aa9333/" target="_blank" class="contact-btn">LinkedIn</a>
+                <a href="Joanna_Aideloje_CV.pdf" target="_blank" class="contact-btn">Open CV (PDF)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Joanna Aideloje. Built with HTML5, CSS3, JavaScript & Python FastAPI.</p>
+    </footer>
+</body>
+</html>
