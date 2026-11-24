@@ -1,83 +1,325 @@
-﻿:root {
-  --bg: #f7f7fb;
-  --text: #1e1e1e;
-  --line: #2a2a2a;
+﻿/* ---------- Variables & reset ---------- */
+:root {
+  --navy: #0a1f44;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--white);
+  background: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 24px 48px;
+a {
+  color: var(--white);
 }
 
-.intro {
-  margin-bottom: 28px;
+h1, h2, h3 {
+  color: var(--white);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-weight: 700;
 }
 
-.small {
-  margin: 0 0 6px;
-  font-size: 1.05rem;
+/* ---------- Navigation ---------- */
+#menu-toggle {
+  display: none;
 }
 
-h1 {
+nav ul {
+  list-style: none;
   margin: 0;
-  font-size: clamp(1.5rem, 2.7vw, 2.3rem);
-  font-weight: 500;
+  padding: 0;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 32px;
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.card-wrap {
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Desktop: show desktop nav, hide mobile nav */
+.mobile-nav {
+  display: none;
+}
+
+.desktop-nav {
+  display: block;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--white);
+}
+
+.desktop-nav .nav-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.card {
-  width: 100%;
-  height: 360px;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
+/* ---------- Hero ---------- */
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 24px 64px;
 }
 
-.card-text {
-  margin-top: 18px;
-  font-size: 1.8rem;
-  font-weight: 500;
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
 }
 
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 12px;
+}
+
+.bio {
+  max-width: 660px;
+  color: var(--white);
+  font-size: 1.05rem;
+  margin: 0 0 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-primary,
+.btn-secondary,
+.contact-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--white);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary,
+.contact-btn {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-primary:hover,
+.contact-btn:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 52px 24px;
+}
+
+.section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--white);
+}
+
+/* ---------- Projects: 2 on top, 3rd below ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-grid > * {
+  background: var(--navy);
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+/* a lone third card spans the full width underneath */
+.project-grid > *:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.project-grid h3 {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.project-grid p {
+  color: var(--white);
+}
+
+.project-grid a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* ---------- Experience ---------- */
+.exp-card,
+.skills-box {
+  background: var(--navy);
+  border: 2px solid var(--white);
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.exp-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.date {
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.institution {
+  color: var(--white);
+  font-weight: 700;
+  margin: 4px 0 14px;
+}
+
+.exp-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--white);
+}
+
+.exp-list li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Tags: white pill, black text ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag,
+.tech-tag,
+.project-grid .tags span,
+.project-grid .tech span {
+  display: inline-block;
+  background: var(--white);
+  color: var(--black);
+  padding: 3px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---------- Contact ---------- */
+.contact-intro {
+  max-width: 660px;
+  color: var(--white);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 28px 24px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-top: 32px;
+  border-top: 1px solid var(--white);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
   }
-}
 
-@media (max-width: 620px) {
-  .cards {
+  .mobile-nav {
+    display: block;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--white);
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .mobile-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  #menu-toggle:checked ~ .nav-list {
+    display: flex;
+  }
+
+  .hero-content {
+    padding: 48px 20px 40px;
+  }
+
+  .section {
+    padding: 36px 20px;
+  }
+
+  .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .card {
-    height: 300px;
-  }
-
-  .card-text {
-    font-size: 1.5rem;
   }
 }
