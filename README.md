@@ -1,12 +1,11 @@
-# Full-Stack Personal Portfolio & REST API
+ Full-Stack Personal Portfolio & REST API
 
 A responsive personal portfolio web application built with a decoupled architecture. It combines a semantic HTML5, CSS3 and JavaScript frontend with a Python FastAPI backend that serves project data.
 
 Live Portfolio: [joannaportfolio-eta.vercel.app](https://joannaportfolio-eta.vercel.app/)
-Live Backend API: [your-backend-name.onrender.com](https://your-backend-name.onrender.com)
-Interactive API Docs: [your-backend-name.onrender.com/docs](https://your-backend-name.onrender.com/docs)
-
-## Features
+Live Backend API: [professional-portfolio-dbdx.onrender.com](https://professional-portfolio-dbdx.onrender.com/)
+Interactive API Docs: [professional-portfolio-dbdx.onrender.com/docs](https://professional-portfolio-dbdx.onrender.com/docs)
+ Features
 
 - Decoupled full-stack architecture: the frontend and backend are separate and talk through RESTful API endpoints.
 - Dynamic content: asynchronous JavaScript (fetch API) gets project data as JSON and renders responsive project cards.
@@ -14,13 +13,13 @@ Interactive API Docs: [your-backend-name.onrender.com/docs](https://your-backend
 - Responsive design: built from scratch with CSS Grid and Flexbox for desktop and mobile.
 - Automatic deployment: connected to GitHub, so every push updates both the frontend (Vercel) and the backend (Render).
 
-## Tech Stack
+Tech Stack
 
 - Frontend: HTML5, CSS3 (Grid and Flexbox), Vanilla JavaScript (ES6+)
 - Backend: Python 3, FastAPI, Uvicorn
 - Deployment: Git, GitHub, Vercel (frontend), Render (backend)
 
-## Project Structure
+ Project Structure
 
 ```text
 professional-portfolio/
@@ -35,7 +34,7 @@ professional-portfolio/
   README.md              Project documentation
 ```
 
-## API Endpoints
+ API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -45,7 +44,7 @@ professional-portfolio/
 
 The backend is hosted on Render's free tier, so the first request after 15 minutes of inactivity can take 30 to 50 seconds while the server wakes up.
 
-## Running Locally
+ Running Locally
 
 1. Clone the repository
 
@@ -68,7 +67,7 @@ The API will run at http://127.0.0.1:8000
 
 Open `front end/index.html` in your browser, or use the Live Server extension in VS Code. To test against your local backend instead of Render, change the fetch URL in `front end/script.js` to http://127.0.0.1:8000
 
-## Author
+Author
 
 Joanna Aideloje
 2nd Year BSc (Hons) Software Engineering Student
