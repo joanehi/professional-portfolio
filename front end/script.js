@@ -2,7 +2,7 @@ async function loadProjects() {
     const grid = document.getElementById('project_container');
     
     try {
-        const response = await fetch('https://professional-portfolio-dbdv.onrender.com/projects');
+        const response = await fetch('https://professional-portfolio-dbdx.onrender.com/projects');
         
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
